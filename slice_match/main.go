@@ -13,20 +13,20 @@ func main() {
 	// TODO: Edge case... output on this sequence is "1"... should probably be "7"
 	//S := []int{7, 6, 5, 4, 3, 2, 1}
 
-	//S := []int{1, 2, 5, 2, 1, 1, 4, 6, 9, 0}
+	S := []int{1, 2, 5, 2, 1, 1, 4, 6, 9, 0}
 
 	// TODO: Edge case... output on this sequence is "0"... should probably be "7"
 	//S := []int{7, 6, 5, 4, 3, 2, 1, 0}
 
 	// TODO: Not entirely sure about this one... if the first four elements, or the last six, best fit the description of "longest ascending"... technically, the last six aren't "ascending", just constant... but they are a longer sequence
-	S := []int{1, 1, 2, 7, 2, 2, 2, 2, 2, 2}
+	//S := []int{1, 1, 2, 7, 2, 2, 2, 2, 2, 2}
 
 	ss := []int{}
 	var n int
 	m := make(map[int]string)
 
 	// All the logic to iterate over the sequence and find subsequences that are ascending... storing them in a map to be sorted later
-	for i := 0; i < len(S); i++ {
+	for i := range S {
 		n = i + 1
 		if n != len(S) {
 			if S[i] <= S[n] {
